@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legends — American Sports Legacy Museum</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet" />
+  <style>
+    .legend-profile {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 60px;
+      align-items: start;
+      padding: 60px 0;
+      border-bottom: 1px solid var(--gray-2);
+    }
+    .legend-profile:last-child { border-bottom: none; }
+    .legend-portrait {
+      width: 280px;
+      aspect-ratio: 3/4;
+      background: var(--gray-1);
+      border: 1px solid var(--gray-2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      text-align: center;
+      padding: 24px;
+    }
+    .portrait-initial {
+      font-family: var(--font-display);
+      font-size: 6rem;
+      color: var(--red);
+      line-height: 1;
+    }
+    .portrait-sport { font-family: var(--font-mono); font-size: 0.65rem; color: var(--gray-3); letter-spacing: 0.15em; text-transform: uppercase; }
+    .legend-bio h3 {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .legend-dates { font-family: var(--font-mono); font-size: 0.7rem; color: var(--red); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; }
+    .legend-bio p { font-size: 0.95rem; color: var(--gray-4); line-height: 1.78; margin-bottom: 16px; max-width: 600px; }
+    .stat-row { display: flex; gap: 40px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--gray-2); flex-wrap: wrap; }
+    .stat-item { display: flex; flex-direction: column; gap: 4px; }
+    .stat-val { font-family: var(--font-display); font-size: 2rem; color: var(--white); }
+    .stat-key { font-family: var(--font-mono); font-size: 0.65rem; color: var(--gray-4); letter-spacing: 0.1em; text-transform: uppercase; }
+    @media (max-width: 720px) {
+      .legend-profile { grid-template-columns: 1fr; }
+      .legend-portrait { width: 100%; max-width: 240px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-logo">ASLM</div>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="leagues.html">Leagues</a>
+      <a href="legends.html" class="active">Legends</a>
+      <a href="artifacts.html">Artifacts</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-tag">EST. 2025</div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="section-label mono">Exhibition Wing II</div>
+      <h1>Hall of<br/>Legends</h1>
+      <p>Athletes who transcended their sports. Their stories are woven into the fabric of American identity — defining what it means to compete, to sacrifice, and to prevail.</p>
+    </div>
+  </header>
+
+  <div class="page-content">
+
+    <div class="section-label mono" style="margin-bottom: 8px;">Four Defining Figures</div>
+    <p style="color: var(--gray-4); max-width: 560px; margin-bottom: 0;">Each of these athletes left a mark that extends far beyond statistics. They changed culture, challenged injustice, and redefined the limits of human achievement.</p>
+
+    <!-- Muhammad Ali -->
+    <div class="legend-profile">
+      <div class="legend-portrait">
+        <div class="portrait-initial">MA</div>
+        <div class="portrait-sport">Boxing — Heavyweight</div>
+      </div>
+      <div class="legend-bio">
+        <div class="legend-dates mono">1942 — 2016</div>
+        <h3>Muhammad Ali</h3>
+        <p>Born Cassius Clay in Louisville, Kentucky, Ali became the most recognized athlete on Earth. He won the heavyweight championship three times, but his impact stretched far beyond boxing — becoming one of the most influential voices of the civil rights movement and Vietnam War opposition.</p>
+        <p>Ali refused military induction in 1967, citing religious beliefs and opposition to the Vietnam War. The decision cost him his title and three years of his prime career. His conviction was unanimously reversed by the Supreme Court in 1971. He lit the 1996 Olympic flame in Atlanta, shaking from Parkinson's disease — a moment witnessed by three billion people.</p>
+        <div class="stat-row">
+          <div class="stat-item"><span class="stat-val">56</span><span class="stat-key">Career Wins</span></div>
+          <div class="stat-item"><span class="stat-val">3×</span><span class="stat-key">World Heavyweight Champion</span></div>
+          <div class="stat-item"><span class="stat-val">1960</span><span class="stat-key">Olympic Gold Medal</span></div>
+          <div class="stat-item"><span class="stat-val">37</span><span class="stat-key">Career KOs</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Michael Jordan -->
+    <div class="legend-profile">
+      <div class="legend-portrait">
+        <div class="portrait-initial">MJ</div>
+        <div class="portrait-sport">NBA — Shooting Guard</div>
+      </div>
+      <div class="legend-bio">
+        <div class="legend-dates mono">1963 — Present</div>
+        <h3>Michael Jordan</h3>
+        <p>Michael Jordan is the consensus greatest basketball player of all time. His six championships with the Chicago Bulls, each accompanied by a Finals MVP award, set a standard of excellence that defined the sport throughout the 1990s and remains the measuring stick for every player who has followed.</p>
+        <p>Beyond basketball, Jordan transformed sports marketing. His partnership with Nike — Air Jordan — became the most successful athlete endorsement deal in history, generating over $5 billion annually. The documentary "The Last Dance" in 2020 drew record viewership, proving Jordan's story endures across generations.</p>
+        <div class="stat-row">
+          <div class="stat-item"><span class="stat-val">6×</span><span class="stat-key">NBA Champion</span></div>
+          <div class="stat-item"><span class="stat-val">6×</span><span class="stat-key">Finals MVP</span></div>
+          <div class="stat-item"><span class="stat-val">5×</span><span class="stat-key">League MVP</span></div>
+          <div class="stat-item"><span class="stat-val">30.1</span><span class="stat-key">Career PPG (All-Time #1)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Serena Williams -->
+    <div class="legend-profile">
+      <div class="legend-portrait">
+        <div class="portrait-initial">SW</div>
+        <div class="portrait-sport">WTA — Tennis</div>
+      </div>
+      <div class="legend-bio">
+        <div class="legend-dates mono">1981 — Present</div>
+        <h3>Serena Williams</h3>
+        <p>Serena Williams is widely regarded as the greatest tennis player — male or female — of the Open Era. Trained on the public courts of Compton, California by her father Richard Williams, she went on to win 23 Grand Slam singles titles, more than any player in the Open Era and more than any male player in history.</p>
+        <p>Williams' impact transcends tennis. She became an outspoken advocate for racial and gender equality in sports, challenged the sport's governing bodies on issues of pay equity and dress code, and continued competing at the highest level through pregnancy and postpartum recovery. She retired in 2022 after an extraordinary 27-year professional career.</p>
+        <div class="stat-row">
+          <div class="stat-item"><span class="stat-val">23</span><span class="stat-key">Grand Slam Titles</span></div>
+          <div class="stat-item"><span class="stat-val">319</span><span class="stat-key">Weeks at World No. 1</span></div>
+          <div class="stat-item"><span class="stat-val">4×</span><span class="stat-key">Olympic Gold Medals</span></div>
+          <div class="stat-item"><span class="stat-val">$94M</span><span class="stat-key">Career Prize Money</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tiger Woods -->
+    <div class="legend-profile">
+      <div class="legend-portrait">
+        <div class="portrait-initial">TW</div>
+        <div class="portrait-sport">PGA Tour — Golf</div>
+      </div>
+      <div class="legend-bio">
+        <div class="legend-dates mono">1975 — Present</div>
+        <h3>Tiger Woods</h3>
+        <p>Tiger Woods is the most dominant golfer of his generation and one of the most recognizable athletes in the history of professional sport. He turned professional in 1996 at age 20 and within a year had already won the Masters by 12 strokes — still the largest margin of victory in Masters history.</p>
+        <p>Woods' cultural impact was profound: TV ratings for golf tournaments doubled when he played. He was the first athlete to reach $1 billion in earnings, and his crossover appeal opened golf to an entirely new generation of diverse fans. His 2019 Masters victory — following four back surgeries and years of personal turmoil — is considered one of the greatest comebacks in sporting history.</p>
+        <div class="stat-row">
+          <div class="stat-item"><span class="stat-val">15</span><span class="stat-key">Major Championships</span></div>
+          <div class="stat-item"><span class="stat-val">82</span><span class="stat-key">PGA Tour Wins (All-Time Record)</span></div>
+          <div class="stat-item"><span class="stat-val">683</span><span class="stat-key">Weeks at World No. 1</span></div>
+          <div class="stat-item"><span class="stat-val">$1B+</span><span class="stat-key">Career Earnings</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Social Proof -->
+  <section class="blockquote-section">
+    <blockquote>"Champions aren't made in gyms. Champions are made from something they have deep inside them — a desire, a dream, a vision."</blockquote>
+    <cite>— Muhammad Ali</cite>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">ASLM</div>
+        <div class="footer-full mono">American Sports Legacy Museum</div>
+        <p>A digital exhibition exploring the history, culture, and memorabilia of American sport.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title mono">Exhibition</div>
+          <a href="leagues.html">Leagues</a>
+          <a href="legends.html">Legends</a>
+          <a href="artifacts.html">Artifacts</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title mono">Sources</div>
+          <a href="https://www.archives.gov" target="_blank">National Archives</a>
+          <a href="https://www.si.edu" target="_blank">Smithsonian</a>
+          <a href="https://www.loc.gov" target="_blank">Library of Congress</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="mono">© 2025 American Sports Legacy Museum — NJIT IT310</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
