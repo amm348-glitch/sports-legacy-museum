@@ -6,13 +6,13 @@
    ============================ */
 
 :root {
-  --black: #0a0a0a;
-  --white: #f5f2eb;
-  --red: #c8102e;
-  --red-dark: #9b0d23;
-  --gold: #d4a017;
-  --gray-1: #1a1a1a;
-  --gray-2: #2d2d2d;
+  --black: #080808;
+  --white: #f0ede6;
+  --red: #c9a84c;
+  --red-dark: #a8893a;
+  --gold: #c9a84c;
+  --gray-1: #141414;
+  --gray-2: #272727;
   --gray-3: #555;
   --gray-4: #999;
   --gray-light: #e8e4dc;
@@ -162,7 +162,9 @@ img { max-width: 100%; display: block; }
 
 .btn-primary {
   display: inline-block;
-  background: var(--red);
+  background: var(--gray-1);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
   color: var(--white);
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -193,7 +195,9 @@ img { max-width: 100%; display: block; }
 }
 
 .btn-outline:hover {
-  background: var(--red);
+  background: var(--gray-1);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
 }
 
 /* Hero stat bar */
@@ -493,7 +497,9 @@ h2 {
    ============================ */
 .blockquote-section {
   padding: 80px 40px;
-  background: var(--red);
+  background: var(--gray-1);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
   text-align: center;
 }
 
@@ -701,7 +707,9 @@ cite {
   top: 6px;
   width: 12px; height: 12px;
   border-radius: 50%;
-  background: var(--red);
+  background: var(--gray-1);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
 }
 
 .timeline-year {
