@@ -23,21 +23,15 @@
       aspect-ratio: 3/4;
       background: var(--gray-1);
       border: 1px solid var(--gray-2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      text-align: center;
-      padding: 24px;
+      overflow: hidden;
     }
-    .portrait-initial {
-      font-family: var(--font-display);
-      font-size: 6rem;
-      color: var(--red);
-      line-height: 1;
+    .legend-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
     }
-    .portrait-sport { font-family: var(--font-mono); font-size: 0.65rem; color: var(--gray-3); letter-spacing: 0.15em; text-transform: uppercase; }
     .legend-bio h3 {
       font-family: var(--font-display);
       font-size: 3.5rem;
@@ -87,14 +81,13 @@
     <!-- Muhammad Ali -->
     <div class="legend-profile">
       <div class="legend-portrait">
-        <div class="portrait-initial">MA</div>
-        <div class="portrait-sport">Boxing — Heavyweight</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Muhammad_Ali_NYWTS.jpg/500px-Muhammad_Ali_NYWTS.jpg" alt="Muhammad Ali" />
       </div>
       <div class="legend-bio">
         <div class="legend-dates mono">1942 — 2016</div>
         <h3>Muhammad Ali</h3>
         <p>Born Cassius Clay in Louisville, Kentucky, Ali became the most recognized athlete on Earth. He won the heavyweight championship three times, but his impact stretched far beyond boxing — becoming one of the most influential voices of the civil rights movement and Vietnam War opposition.</p>
-        <p>Ali refused military induction in 1967, citing religious beliefs and opposition to the Vietnam War. The decision cost him his title and three years of his prime career. His conviction was unanimously reversed by the Supreme Court in 1971. He lit the 1996 Olympic flame in Atlanta, shaking from Parkinson's disease — a moment witnessed by three billion people.</p>
+        <p>Ali refused military induction in 1967, citing religious beliefs and opposition to the Vietnam War. The decision cost him his title and three years of his prime career. His conviction was unanimously reversed by the Supreme Court in 1971.</p>
         <div class="stat-row">
           <div class="stat-item"><span class="stat-val">56</span><span class="stat-key">Career Wins</span></div>
           <div class="stat-item"><span class="stat-val">3×</span><span class="stat-key">World Heavyweight Champion</span></div>
@@ -107,14 +100,13 @@
     <!-- Michael Jordan -->
     <div class="legend-profile">
       <div class="legend-portrait">
-        <div class="portrait-initial">MJ</div>
-        <div class="portrait-sport">NBA — Shooting Guard</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Jordan_by_Lipofsky_16577_%28high_quality%29.jpg/500px-Jordan_by_Lipofsky_16577_%28high_quality%29.jpg" alt="Michael Jordan" />
       </div>
       <div class="legend-bio">
         <div class="legend-dates mono">1963 — Present</div>
         <h3>Michael Jordan</h3>
-        <p>Michael Jordan is the consensus greatest basketball player of all time. His six championships with the Chicago Bulls, each accompanied by a Finals MVP award, set a standard of excellence that defined the sport throughout the 1990s and remains the measuring stick for every player who has followed.</p>
-        <p>Beyond basketball, Jordan transformed sports marketing. His partnership with Nike — Air Jordan — became the most successful athlete endorsement deal in history, generating over $5 billion annually. The documentary "The Last Dance" in 2020 drew record viewership, proving Jordan's story endures across generations.</p>
+        <p>Michael Jordan is the consensus greatest basketball player of all time. His six championships with the Chicago Bulls set a standard of excellence that defined the sport throughout the 1990s and remains the measuring stick for every player who has followed.</p>
+        <p>Beyond basketball, Jordan transformed sports marketing. His partnership with Nike — Air Jordan — became the most successful athlete endorsement deal in history, generating over $5 billion annually.</p>
         <div class="stat-row">
           <div class="stat-item"><span class="stat-val">6×</span><span class="stat-key">NBA Champion</span></div>
           <div class="stat-item"><span class="stat-val">6×</span><span class="stat-key">Finals MVP</span></div>
@@ -127,14 +119,13 @@
     <!-- Serena Williams -->
     <div class="legend-profile">
       <div class="legend-portrait">
-        <div class="portrait-initial">SW</div>
-        <div class="portrait-sport">WTA — Tennis</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/SWilliams-SYD-1.jpg/500px-SWilliams-SYD-1.jpg" alt="Serena Williams" />
       </div>
       <div class="legend-bio">
         <div class="legend-dates mono">1981 — Present</div>
         <h3>Serena Williams</h3>
-        <p>Serena Williams is widely regarded as the greatest tennis player — male or female — of the Open Era. Trained on the public courts of Compton, California by her father Richard Williams, she went on to win 23 Grand Slam singles titles, more than any player in the Open Era and more than any male player in history.</p>
-        <p>Williams' impact transcends tennis. She became an outspoken advocate for racial and gender equality in sports, challenged the sport's governing bodies on issues of pay equity and dress code, and continued competing at the highest level through pregnancy and postpartum recovery. She retired in 2022 after an extraordinary 27-year professional career.</p>
+        <p>Serena Williams is widely regarded as the greatest tennis player of the Open Era. Trained on the public courts of Compton, California, she won 23 Grand Slam singles titles — more than any player in the Open Era.</p>
+        <p>Williams became an outspoken advocate for racial and gender equality in sports and continued competing through pregnancy and postpartum recovery. She retired in 2022 after an extraordinary 27-year professional career.</p>
         <div class="stat-row">
           <div class="stat-item"><span class="stat-val">23</span><span class="stat-key">Grand Slam Titles</span></div>
           <div class="stat-item"><span class="stat-val">319</span><span class="stat-key">Weeks at World No. 1</span></div>
@@ -147,17 +138,16 @@
     <!-- Tiger Woods -->
     <div class="legend-profile">
       <div class="legend-portrait">
-        <div class="portrait-initial">TW</div>
-        <div class="portrait-sport">PGA Tour — Golf</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Tiger_Woods_-_AT%26T_National_tournament_2009.jpg/500px-Tiger_Woods_-_AT%26T_National_tournament_2009.jpg" alt="Tiger Woods" />
       </div>
       <div class="legend-bio">
         <div class="legend-dates mono">1975 — Present</div>
         <h3>Tiger Woods</h3>
-        <p>Tiger Woods is the most dominant golfer of his generation and one of the most recognizable athletes in the history of professional sport. He turned professional in 1996 at age 20 and within a year had already won the Masters by 12 strokes — still the largest margin of victory in Masters history.</p>
-        <p>Woods' cultural impact was profound: TV ratings for golf tournaments doubled when he played. He was the first athlete to reach $1 billion in earnings, and his crossover appeal opened golf to an entirely new generation of diverse fans. His 2019 Masters victory — following four back surgeries and years of personal turmoil — is considered one of the greatest comebacks in sporting history.</p>
+        <p>Tiger Woods is the most dominant golfer of his generation. He turned professional in 1996 at age 20 and within a year won the Masters by 12 strokes — still the largest margin of victory in Masters history.</p>
+        <p>Woods was the first athlete to reach $1 billion in earnings. His 2019 Masters victory — following four back surgeries and years of personal turmoil — is considered one of the greatest comebacks in sporting history.</p>
         <div class="stat-row">
           <div class="stat-item"><span class="stat-val">15</span><span class="stat-key">Major Championships</span></div>
-          <div class="stat-item"><span class="stat-val">82</span><span class="stat-key">PGA Tour Wins (All-Time Record)</span></div>
+          <div class="stat-item"><span class="stat-val">82</span><span class="stat-key">PGA Tour Wins</span></div>
           <div class="stat-item"><span class="stat-val">683</span><span class="stat-key">Weeks at World No. 1</span></div>
           <div class="stat-item"><span class="stat-val">$1B+</span><span class="stat-key">Career Earnings</span></div>
         </div>
@@ -166,7 +156,6 @@
 
   </div>
 
-  <!-- Social Proof -->
   <section class="blockquote-section">
     <blockquote>"Champions aren't made in gyms. Champions are made from something they have deep inside them — a desire, a dream, a vision."</blockquote>
     <cite>— Muhammad Ali</cite>
