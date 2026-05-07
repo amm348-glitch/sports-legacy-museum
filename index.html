@@ -8,10 +8,63 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet" />
+  <style>
+    .tour-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2px;
+      background: var(--gray-2);
+      margin-top: 48px;
+    }
+    .tour-step {
+      background: var(--gray-1);
+      padding: 32px 24px;
+      text-decoration: none;
+      transition: background 0.2s;
+      position: relative;
+    }
+    .tour-step:hover { background: var(--gray-2); }
+    .tour-step-num { font-family: var(--font-display); font-size: 4rem; color: var(--gold); opacity: 0.3; line-height: 1; }
+    .tour-step-title { font-family: var(--font-display); font-size: 1.4rem; text-transform: uppercase; margin: 8px 0; }
+    .tour-step-desc { font-size: 0.82rem; color: var(--gray-4); line-height: 1.6; }
+    .tour-step-arrow { color: var(--gold); margin-top: 16px; font-size: 1.2rem; transition: transform 0.2s; }
+    .tour-step:hover .tour-step-arrow { transform: translateX(4px); }
+    .feature-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--gray-2);
+      margin-top: 2px;
+    }
+    .feature-card {
+      background: var(--gray-1);
+      padding: 60px 48px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .feature-card:hover { background: var(--gray-2); }
+    .feature-card h3 { font-family: var(--font-display); font-size: 3rem; text-transform: uppercase; line-height: 1; margin: 12px 0 16px; }
+    .feature-card p { font-size: 0.92rem; color: var(--gray-4); line-height: 1.75; max-width: 400px; }
+    .intro-section {
+      padding: 100px 40px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .intro-text h2 { margin-bottom: 24px; }
+    .intro-text p { color: var(--gray-4); line-height: 1.8; margin-bottom: 16px; font-size: 0.95rem; }
+    @media (max-width: 900px) {
+      .tour-steps { grid-template-columns: repeat(2, 1fr); }
+      .feature-row { grid-template-columns: 1fr; }
+      .intro-section { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav class="nav">
     <div class="nav-logo">ASLM</div>
     <div class="nav-links">
@@ -19,6 +72,7 @@
       <a href="pages/leagues.html">Leagues</a>
       <a href="pages/legends.html">Legends</a>
       <a href="pages/artifacts.html">Artifacts</a>
+      <a href="pages/timeline.html">Timeline</a>
       <a href="pages/about.html">About</a>
     </div>
     <div class="nav-tag">EST. 2025</div>
@@ -28,147 +82,121 @@
   <header class="hero">
     <div class="hero-grid-overlay"></div>
     <div class="hero-content">
-      <div class="hero-label mono">Exhibition No. 001</div>
+      <div class="hero-label mono">The Definitive Digital Exhibition</div>
       <h1 class="hero-title">American<br/>Sports<br/>Legacy</h1>
       <div class="hero-sub">
-        <p>A digital museum dedicated to the history, culture, and memorabilia of American sport — from championship rings to civil rights milestones.</p>
-        <a href="pages/leagues.html" class="btn-primary">Enter Exhibition →</a>
+        <p>From Jackie Robinson breaking the color line to Michael Jordan redefining greatness — this is the story of American sport. A guided tour through 150 years of history, culture, and unforgettable moments.</p>
+        <a href="pages/leagues.html" class="btn-primary">Begin the Tour →</a>
       </div>
     </div>
     <div class="hero-stat-bar">
-      <div class="stat">
-        <span class="stat-num">4</span>
-        <span class="stat-label mono">Major Leagues</span>
-      </div>
+      <div class="stat"><span class="stat-num">4</span><span class="stat-label mono">Major Leagues</span></div>
       <div class="stat-div"></div>
-      <div class="stat">
-        <span class="stat-num">150+</span>
-        <span class="stat-label mono">Years of History</span>
-      </div>
+      <div class="stat"><span class="stat-num">150+</span><span class="stat-label mono">Years of History</span></div>
       <div class="stat-div"></div>
-      <div class="stat">
-        <span class="stat-num">100M+</span>
-        <span class="stat-label mono">Fans Nationwide</span>
-      </div>
+      <div class="stat"><span class="stat-num">20+</span><span class="stat-label mono">Legends Profiled</span></div>
       <div class="stat-div"></div>
-      <div class="stat">
-        <span class="stat-num">∞</span>
-        <span class="stat-label mono">Moments That Mattered</span>
-      </div>
+      <div class="stat"><span class="stat-num">50+</span><span class="stat-label mono">Defining Moments</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">100M+</span><span class="stat-label mono">Fans Nationwide</span></div>
     </div>
   </header>
 
-  <!-- SOCIAL PROOF BANNER — Cialdini: Social Proof -->
+  <!-- SOCIAL PROOF -->
   <section class="proof-banner">
     <div class="proof-inner">
-      <span class="mono">As featured in:</span>
+      <span class="mono">Sources & references:</span>
       <span class="proof-source">National Archives</span>
       <span class="proof-sep">—</span>
       <span class="proof-source">Smithsonian Institution</span>
       <span class="proof-sep">—</span>
       <span class="proof-source">Library of Congress</span>
       <span class="proof-sep">—</span>
+      <span class="proof-source">Pro Football Hall of Fame</span>
+      <span class="proof-sep">—</span>
       <span class="proof-source">National Baseball Hall of Fame</span>
     </div>
   </section>
 
-  <!-- WINGS GRID -->
-  <section class="wings">
-    <div class="wings-header">
-      <div class="section-label mono">Exhibition Wings</div>
-      <h2>Explore the Collection</h2>
-    </div>
-    <div class="wings-grid">
-
-      <a href="pages/leagues.html" class="wing-card wing-nba">
-        <div class="wing-num mono">01</div>
-        <div class="wing-league">NBA</div>
-        <div class="wing-name">Basketball</div>
-        <div class="wing-desc">From Naismith's peach basket to the modern dynasty era — trace the evolution of the world's premier basketball league.</div>
-        <div class="wing-arrow">→</div>
+  <!-- GUIDED TOUR -->
+  <section style="padding: 100px 40px; max-width: var(--max-w); margin: 0 auto;">
+    <div class="section-label mono">Your Guided Tour</div>
+    <h2>Follow the Exhibition</h2>
+    <p class="section-sub">The museum is designed as a journey. Start at the leagues, explore the legends, examine the artifacts, and trace the full timeline of American sports history.</p>
+    <div class="tour-steps">
+      <a href="pages/leagues.html" class="tour-step">
+        <div class="tour-step-num">01</div>
+        <div class="tour-step-title">The Leagues</div>
+        <div class="tour-step-desc">Explore the NBA, NFL, MLB, and NHL — their origins, dynasties, and defining moments.</div>
+        <div class="tour-step-arrow">→</div>
       </a>
-
-      <a href="pages/leagues.html" class="wing-card wing-nfl">
-        <div class="wing-num mono">02</div>
-        <div class="wing-league">NFL</div>
-        <div class="wing-name">Football</div>
-        <div class="wing-desc">The most-watched sport in America. Super Bowls, Hail Marys, and the cultural force that defines autumn Sundays.</div>
-        <div class="wing-arrow">→</div>
+      <a href="pages/nba.html" class="tour-step">
+        <div class="tour-step-num">02</div>
+        <div class="tour-step-title">Basketball</div>
+        <div class="tour-step-desc">Deep dive into the NBA — from Wilt Chamberlain to LeBron James.</div>
+        <div class="tour-step-arrow">→</div>
       </a>
-
-      <a href="pages/leagues.html" class="wing-card wing-mlb">
-        <div class="wing-num mono">03</div>
-        <div class="wing-league">MLB</div>
-        <div class="wing-name">Baseball</div>
-        <div class="wing-desc">America's pastime. From Jackie Robinson breaking the color line to 60-homer seasons — the game that shaped the nation.</div>
-        <div class="wing-arrow">→</div>
+      <a href="pages/nfl.html" class="tour-step">
+        <div class="tour-step-num">03</div>
+        <div class="tour-step-title">Football</div>
+        <div class="tour-step-desc">Super Bowls, Hail Marys, and the cultural force that defines American autumn.</div>
+        <div class="tour-step-arrow">→</div>
       </a>
-
-      <a href="pages/leagues.html" class="wing-card wing-nhl">
-        <div class="wing-num mono">04</div>
-        <div class="wing-league">NHL</div>
-        <div class="wing-name">Hockey</div>
-        <div class="wing-desc">The fastest game on ice. Stanley Cup legacies, iconic rivalries, and the toughest athletes in professional sport.</div>
-        <div class="wing-arrow">→</div>
+      <a href="pages/mlb.html" class="tour-step">
+        <div class="tour-step-num">04</div>
+        <div class="tour-step-title">Baseball</div>
+        <div class="tour-step-desc">America's pastime — from Ruth's 60 homers to Jackie Robinson's historic debut.</div>
+        <div class="tour-step-arrow">→</div>
       </a>
-
-    </div>
-  </section>
-
-  <!-- LEGENDS SPOTLIGHT -->
-  <section class="legends">
-    <div class="section-label mono">Hall of Legends</div>
-    <h2>Figures Who Transcended Sport</h2>
-    <p class="section-sub">These athletes didn't just win championships — they changed American culture.</p>
-    <div class="legends-row">
-      <a href="pages/legends.html" class="legend-card">
-        <div class="legend-sport mono">Boxing / Activism</div>
-        <div class="legend-name">Muhammad<br/>Ali</div>
-        <div class="legend-quote">"Float like a butterfly, sting like a bee."</div>
-      </a>
-      <a href="pages/legends.html" class="legend-card">
-        <div class="legend-sport mono">Basketball</div>
-        <div class="legend-name">Michael<br/>Jordan</div>
-        <div class="legend-quote">6× NBA Champion. The standard by which greatness is measured.</div>
-      </a>
-      <a href="pages/legends.html" class="legend-card">
-        <div class="legend-sport mono">Tennis</div>
-        <div class="legend-name">Serena<br/>Williams</div>
-        <div class="legend-quote">23 Grand Slam titles. The greatest athlete of her generation.</div>
-      </a>
-      <a href="pages/legends.html" class="legend-card">
-        <div class="legend-sport mono">Golf</div>
-        <div class="legend-name">Tiger<br/>Woods</div>
-        <div class="legend-quote">15 Major championships. Redefined what a golfer could be.</div>
+      <a href="pages/nhl.html" class="tour-step">
+        <div class="tour-step-num">05</div>
+        <div class="tour-step-title">Hockey</div>
+        <div class="tour-step-desc">The fastest game on ice — Stanley Cup legacies and Gretzky's unbreakable records.</div>
+        <div class="tour-step-arrow">→</div>
       </a>
     </div>
   </section>
 
-  <!-- ARTIFACT HIGHLIGHT -->
-  <section class="artifact-highlight">
-    <div class="ah-text">
-      <div class="section-label mono">Featured Artifact</div>
-      <h2>Jackie Robinson's<br/>1947 Contract</h2>
-      <p>On April 15, 1947, Jackie Robinson took the field for the Brooklyn Dodgers — becoming the first African American to play in Major League Baseball in the modern era. His contract, preserved in the National Archives, is one of the most significant documents in American sports history.</p>
-      <p class="ah-source mono">Source: Library of Congress — Breaking the Color Line Exhibition</p>
-      <a href="pages/artifacts.html" class="btn-outline">View Artifacts Wing →</a>
+  <!-- INTRO NARRATIVE -->
+  <section class="intro-section">
+    <div class="intro-text">
+      <div class="section-label mono">Why This Matters</div>
+      <h2>Sport as American Identity</h2>
+      <p>American sports are more than games. They are mirrors of the nation — reflecting its values, its conflicts, its triumphs, and its failures. When Jackie Robinson stepped onto Ebbets Field in 1947, it wasn't just a baseball game. It was a statement about what America could become.</p>
+      <p>When Muhammad Ali refused the draft, when Billie Jean King beat Bobby Riggs, when Colin Kaepernick took a knee — these moments transcended sport. They became part of the national conversation about who we are and what we stand for.</p>
+      <p>This museum exists to tell that story. Not just the scores and the statistics, but the human drama behind them. The sacrifice, the courage, the legacy.</p>
+      <a href="pages/timeline.html" class="btn-outline">View Full Timeline →</a>
     </div>
-    <div class="ah-visual">
-      <div class="artifact-frame">
-        <div class="artifact-img-placeholder">
-          <div class="artifact-label mono">Primary Source Document</div>
-          <div class="artifact-title">Brooklyn Dodgers<br/>Signing Contract<br/>1947</div>
-          <div class="artifact-tag mono">Catalog No. MLB-001</div>
-        </div>
-      </div>
+    <div style="background: var(--gray-1); border: 1px solid var(--gray-2); aspect-ratio: 4/5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 40px; text-align: center;">
+      <div style="font-family: var(--font-display); font-size: 6rem; color: var(--gold); line-height: 1;">1947</div>
+      <div class="mono" style="color: var(--red);">The Year Everything Changed</div>
+      <p style="font-size: 0.85rem; color: var(--gray-4); line-height: 1.7;">Jackie Robinson's debut with the Brooklyn Dodgers didn't just break baseball's color line — it helped crack open a nation's conscience.</p>
     </div>
   </section>
 
-  <!-- QUOTE — Social Proof via Authority -->
+  <!-- FEATURED WINGS -->
+  <section style="padding: 0 40px 100px; max-width: var(--max-w); margin: 0 auto;">
+    <div class="section-label mono">Featured Wings</div>
+    <h2 style="margin-bottom: 48px;">Explore the Collection</h2>
+    <div class="feature-row">
+      <a href="pages/legends.html" class="feature-card">
+        <div class="section-label mono">Wing II</div>
+        <h3>Hall of Legends</h3>
+        <p>Twenty athletes who transcended their sports — Ali, Jordan, Serena, Tiger, Brady, Gretzky, Ruth, and more. Their stories shaped American culture.</p>
+        <div style="margin-top: 24px; color: var(--gold); font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em;">EXPLORE →</div>
+      </a>
+      <a href="pages/artifacts.html" class="feature-card">
+        <div class="section-label mono">Wing III</div>
+        <h3>The Collection</h3>
+        <p>Championship rings, trading cards, game-worn jerseys, historic documents. The objects that carry the memory of American sports history.</p>
+        <div style="margin-top: 24px; color: var(--gold); font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em;">EXPLORE →</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
   <section class="blockquote-section">
-    <blockquote>
-      "Sports have the power to change the world. It has the power to inspire. It has the power to unite people in a way that little else does."
-    </blockquote>
+    <blockquote>"Sports have the power to change the world. It has the power to inspire, to unite people in a way that little else does."</blockquote>
     <cite>— Nelson Mandela</cite>
   </section>
 
@@ -184,8 +212,17 @@
         <div class="footer-col">
           <div class="footer-col-title mono">Exhibition</div>
           <a href="pages/leagues.html">Leagues</a>
+          <a href="pages/nba.html">NBA</a>
+          <a href="pages/nfl.html">NFL</a>
+          <a href="pages/mlb.html">MLB</a>
+          <a href="pages/nhl.html">NHL</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title mono">Explore</div>
           <a href="pages/legends.html">Legends</a>
           <a href="pages/artifacts.html">Artifacts</a>
+          <a href="pages/timeline.html">Timeline</a>
+          <a href="pages/about.html">About</a>
         </div>
         <div class="footer-col">
           <div class="footer-col-title mono">Sources</div>

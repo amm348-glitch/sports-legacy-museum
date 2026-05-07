@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeline — American Sports Legacy Museum</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet" />
+  <style>
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+      margin-bottom: 48px;
+    }
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border: 1px solid var(--gray-2);
+      background: transparent;
+      color: var(--gray-4);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+    .big-timeline { position: relative; padding-left: 60px; }
+    .big-timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: var(--gray-2);
+    }
+    .tl-item {
+      position: relative;
+      margin-bottom: 48px;
+      display: none;
+    }
+    .tl-item.visible { display: block; }
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -46px;
+      top: 8px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--black);
+    }
+    .tl-year {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .tl-sport {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--red);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin: 6px 0;
+    }
+    .tl-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .tl-desc {
+      font-size: 0.88rem;
+      color: var(--gray-4);
+      line-height: 1.75;
+      max-width: 680px;
+    }
+    .tl-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border: 1px solid var(--gray-2);
+      color: var(--gray-3);
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-logo">ASLM</div>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="leagues.html">Leagues</a>
+      <a href="legends.html">Legends</a>
+      <a href="artifacts.html">Artifacts</a>
+      <a href="timeline.html" class="active">Timeline</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-tag">EST. 2025</div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="section-label mono">Exhibition Wing V</div>
+      <h1>150 Years<br/>of History</h1>
+      <p>The complete timeline of American sports history — from the founding of the National League in 1876 to the present day. Filter by sport to trace your own story through the collection.</p>
+    </div>
+  </header>
+
+  <div class="page-content">
+
+    <div class="section-label mono">Filter by Sport</div>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Sports</button>
+      <button class="filter-btn" data-filter="nba">NBA</button>
+      <button class="filter-btn" data-filter="nfl">NFL</button>
+      <button class="filter-btn" data-filter="mlb">MLB</button>
+      <button class="filter-btn" data-filter="nhl">NHL</button>
+      <button class="filter-btn" data-filter="culture">Culture</button>
+    </div>
+
+    <div class="big-timeline">
+
+      <div class="tl-item visible" data-sport="mlb">
+        <div class="tl-year">1876</div>
+        <div class="tl-sport">MLB</div>
+        <div class="tl-title">National League Founded</div>
+        <p class="tl-desc">The National League of Professional Base Ball Clubs is established — the first major professional sports league in American history. Eight charter teams compete for a pennant, establishing the model for professional sports organization in America.</p>
+        <span class="tl-badge">League History</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="mlb">
+        <div class="tl-year">1903</div>
+        <div class="tl-sport">MLB</div>
+        <div class="tl-title">First World Series</div>
+        <p class="tl-desc">The Boston Americans defeat the Pittsburgh Pirates in the first modern World Series, 5 games to 3. The championship series between the American and National Leagues becomes the defining event of baseball's year.</p>
+        <span class="tl-badge">Championship</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="nfl">
+        <div class="tl-year">1920</div>
+        <div class="tl-sport">NFL</div>
+        <div class="tl-title">NFL Founded</div>
+        <p class="tl-desc">The American Professional Football Association is founded in Canton, Ohio with 14 teams. Renamed the National Football League in 1922, it begins its journey from regional curiosity to America's most watched sport.</p>
+        <span class="tl-badge">League History</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="mlb">
+        <div class="tl-year">1927</div>
+        <div class="tl-sport">MLB</div>
+        <div class="tl-title">Babe Ruth Hits 60 Home Runs</div>
+        <p class="tl-desc">Ruth's New York Yankees — "Murderers' Row" — post a 110-44 record. Ruth's 60 home run season stands as the record for 34 years. The Sultan of Swat makes baseball America's dominant sport.</p>
+        <span class="tl-badge">Record</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="nhl">
+        <div class="tl-year">1942</div>
+        <div class="tl-sport">NHL</div>
+        <div class="tl-title">Original Six Era Begins</div>
+        <p class="tl-desc">The NHL settles into its "Original Six" format — Boston Bruins, Chicago Black Hawks, Detroit Red Wings, Montreal Canadiens, New York Rangers, and Toronto Maple Leafs — that will define the league for 25 years.</p>
+        <span class="tl-badge">League History</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="mlb culture">
+        <div class="tl-year">1947</div>
+        <div class="tl-sport">MLB · Civil Rights</div>
+        <div class="tl-title">Jackie Robinson Breaks the Color Line</div>
+        <p class="tl-desc">On April 15, 1947, Jackie Robinson takes the field for the Brooklyn Dodgers — becoming the first African American to play in MLB in the modern era. His courage under immense pressure helps crack open America's conscience on racial equality.</p>
+        <span class="tl-badge">Cultural Milestone</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="nba">
+        <div class="tl-year">1946</div>
+        <div class="tl-sport">NBA</div>
+        <div class="tl-title">BAA Founded — NBA Begins</div>
+        <p class="tl-desc">The Basketball Association of America is founded by arena owners. It merges with the rival NBL in 1949 to become the NBA. Professional basketball begins its long ascent to global dominance.</p>
+        <span class="tl-badge">League History</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="nfl">
+        <div class="tl-year">1958</div>
+        <div class="tl-sport">NFL</div>
+        <div class="tl-title">The Greatest Game Ever Played</div>
+        <p class="tl-desc">The Baltimore Colts defeat the New York Giants 23-17 in sudden death overtime — the first overtime game in NFL history. Broadcast nationally on television, the game introduces the country to professional football and launches the NFL's rise to dominance.</p>
+        <span class="tl-badge">Landmark Game</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="nfl">
+        <div class="tl-year">1967</div>
+        <div class="tl-sport">NFL</div>
+        <div class="tl-title">First Super Bowl</div>
+        <p class="tl-desc">Super Bowl I: Green Bay Packers 35, Kansas City Chiefs 10. Tickets cost $6–$12. The game is not sold out. Today, Super Bowl tickets average $10,000 and the event is watched by over 100 million Americans.</p>
+        <span class="tl-badge">Championship</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="culture">
+        <div class="tl-year">1967</div>
+        <div class="tl-sport">Culture</div>
+        <div class="tl-title">Muhammad Ali Refuses the Draft</div>
+        <p class="tl-desc">Ali refuses military induction, citing religious beliefs and opposition to the Vietnam War. He is stripped of his heavyweight title and banned from boxing for three years. The Supreme Court unanimously overturns his conviction in 1971.</p>
+        <span class="tl-badge">Cultural Milestone</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="culture">
+        <div class="tl-year">1972</div>
+        <div class="tl-sport">Culture</div>
+        <div class="tl-title">Title IX Passed</div>
+        <p class="tl-desc">Title IX of the Education Amendments prohibits sex discrimination in federally funded education programs. The legislation transforms women's participation in American sports at every level — from high school to the Olympics.</p>
+        <span class="tl-badge">Legislation</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="nhl culture">
+        <div class="tl-year">1980</div>
+        <div class="tl-sport">NHL · Olympics</div>
+        <div class="tl-title">Miracle on Ice</div>
+        <p class="tl-desc">Team USA defeats the Soviet Union 4-3 at the Lake Placid Winter Olympics. Sports Illustrated names it the greatest sports moment of the 20th century. Al Michaels: "Do you believe in miracles? YES!"</p>
+        <span class="tl-badge">Cultural Milestone</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="nba">
+        <div class="tl-year">1984</div>
+        <div class="tl-sport">NBA</div>
+        <div class="tl-title">Michael Jordan Drafted</div>
+        <p class="tl-desc">The Chicago Bulls select Michael Jordan with the 3rd pick in the 1984 NBA Draft. Over the next 15 years, Jordan transforms basketball into a global phenomenon — and the NBA into a $10 billion enterprise.</p>
+        <span class="tl-badge">Draft</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="nba">
+        <div class="tl-year">1985</div>
+        <div class="tl-sport">NBA</div>
+        <div class="tl-title">Air Jordan 1 Released</div>
+        <p class="tl-desc">Nike releases the Air Jordan 1. The NBA fines Jordan $5,000 per game for wearing it — Nike pays the fines and turns the controversy into an ad campaign. The shoe generates $162 million in its first year and permanently changes sports marketing.</p>
+        <span class="tl-badge">Culture</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="mlb">
+        <div class="tl-year">1994</div>
+        <div class="tl-sport">MLB</div>
+        <div class="tl-title">Baseball Strike Cancels World Series</div>
+        <p class="tl-desc">Players strike on August 12, 1994 — canceling the World Series for the first time since 1904. The work stoppage devastates fan attendance and trust, beginning baseball's long road back to relevance.</p>
+        <span class="tl-badge">Labor History</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="nba">
+        <div class="tl-year">1998</div>
+        <div class="tl-sport">NBA</div>
+        <div class="tl-title">Jordan's Last Shot</div>
+        <p class="tl-desc">Michael Jordan hits the series-winning jumper over Bryon Russell with 5.2 seconds remaining in Game 6 of the NBA Finals against the Utah Jazz — his sixth and final championship. The image becomes one of the most iconic in sports photography.</p>
+        <span class="tl-badge">Defining Moment</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="culture">
+        <div class="tl-year">2004</div>
+        <div class="tl-sport">Culture</div>
+        <div class="tl-title">LeBron James Enters the NBA</div>
+        <p class="tl-desc">Selected 1st overall by the Cleveland Cavaliers, LeBron James begins the career that will eventually see him surpass Michael Jordan as the NBA's all-time leading scorer and reignite the greatest debate in sports history.</p>
+        <span class="tl-badge">Draft</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="mlb">
+        <div class="tl-year">2016</div>
+        <div class="tl-sport">MLB</div>
+        <div class="tl-title">Cubs End 108-Year Championship Drought</div>
+        <p class="tl-desc">The Chicago Cubs defeat the Cleveland Indians in Game 7 of the World Series — ending the longest championship drought in professional sports history. Over 40 million viewers tune in for Game 7.</p>
+        <span class="tl-badge">Championship</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="culture">
+        <div class="tl-year">2016</div>
+        <div class="tl-sport">Culture</div>
+        <div class="tl-title">Colin Kaepernick Takes a Knee</div>
+        <p class="tl-desc">San Francisco 49ers quarterback Colin Kaepernick kneels during the national anthem to protest police brutality and racial injustice. The gesture sparks a national conversation about the role of athletes in social justice that continues today.</p>
+        <span class="tl-badge">Cultural Milestone</span>
+      </div>
+
+      <div class="tl-item visible" data-sport="nba">
+        <div class="tl-year">2023</div>
+        <div class="tl-sport">NBA</div>
+        <div class="tl-title">LeBron James Becomes All-Time Scoring Leader</div>
+        <p class="tl-desc">LeBron James surpasses Kareem Abdul-Jabbar's all-time NBA scoring record of 38,387 points on February 7, 2023 — in front of a sold-out crowd in Los Angeles. The moment ends a debate that defined a generation of basketball.</p>
+        <span class="tl-badge">Record</span>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="blockquote-section">
+    <blockquote>"The strength of the team is each individual member. The strength of each member is the team."</blockquote>
+    <cite>— Phil Jackson</cite>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">ASLM</div>
+        <div class="footer-full mono">American Sports Legacy Museum</div>
+        <p>A digital exhibition exploring the history, culture, and memorabilia of American sport.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title mono">Leagues</div>
+          <a href="nba.html">NBA</a>
+          <a href="nfl.html">NFL</a>
+          <a href="mlb.html">MLB</a>
+          <a href="nhl.html">NHL</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title mono">Explore</div>
+          <a href="legends.html">Legends</a>
+          <a href="artifacts.html">Artifacts</a>
+          <a href="timeline.html">Timeline</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="mono">© 2025 American Sports Legacy Museum — NJIT IT310</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.tl-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        items.forEach(item => {
+          const sport = item.dataset.sport || '';
+          if (filter === 'all' || sport.includes(filter)) {
+            item.classList.add('visible');
+          } else {
+            item.classList.remove('visible');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

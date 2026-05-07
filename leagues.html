@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leagues — American Sports Legacy Museum</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet" />
+  <style>
+    .league-hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: var(--gray-2);
+      margin-top: 48px;
+    }
+    .league-hero-card {
+      background: var(--gray-1);
+      padding: 60px 48px;
+      text-decoration: none;
+      transition: background 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+    .league-hero-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .league-hero-card:hover::after { transform: scaleX(1); }
+    .league-hero-card:hover { background: var(--gray-2); }
+    .league-abbr { font-family: var(--font-display); font-size: 6rem; line-height: 1; color: var(--white); }
+    .league-full { font-family: var(--font-mono); font-size: 0.7rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; }
+    .league-founded { font-family: var(--font-mono); font-size: 0.65rem; color: var(--gray-3); letter-spacing: 0.1em; }
+    .league-desc { font-size: 0.92rem; color: var(--gray-4); line-height: 1.75; max-width: 440px; }
+    .league-stats { display: flex; gap: 32px; margin-top: 8px; flex-wrap: wrap; }
+    .league-stat-num { font-family: var(--font-display); font-size: 2rem; color: var(--white); }
+    .league-stat-label { font-family: var(--font-mono); font-size: 0.6rem; color: var(--gray-4); letter-spacing: 0.1em; text-transform: uppercase; }
+    .league-cta { font-family: var(--font-mono); font-size: 0.7rem; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 8px; }
+    @media (max-width: 900px) { .league-hero-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-logo">ASLM</div>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="leagues.html" class="active">Leagues</a>
+      <a href="legends.html">Legends</a>
+      <a href="artifacts.html">Artifacts</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-tag">EST. 2025</div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="section-label mono">Exhibition Wing I</div>
+      <h1>The Four<br/>Leagues</h1>
+      <p>Four leagues. Four stories. Four different ways that sport embedded itself into the American soul. Select a league to begin your deep dive.</p>
+    </div>
+  </header>
+
+  <div class="proof-banner">
+    <div class="proof-inner">
+      <span class="mono">Combined:</span>
+      <span class="proof-source">124 Franchises</span>
+      <span class="proof-sep">—</span>
+      <span class="proof-source">$45B Annual Revenue</span>
+      <span class="proof-sep">—</span>
+      <span class="proof-source">400+ Years of Combined History</span>
+      <span class="proof-sep">—</span>
+      <span class="proof-source">300M+ American Fans</span>
+    </div>
+  </div>
+
+  <div class="page-content">
+
+    <div class="section-label mono">Choose Your Wing</div>
+    <h2>Enter a League</h2>
+
+    <div class="league-hero-grid">
+
+      <a href="nba.html" class="league-hero-card">
+        <div class="league-abbr">NBA</div>
+        <div class="league-full">National Basketball Association</div>
+        <div class="league-founded mono">Founded 1946 · 30 Teams</div>
+        <p class="league-desc">From Wilt's 100-point game to LeBron breaking the all-time scoring record — the NBA is the world's premier basketball league and one of the most globally recognized sports brands on earth.</p>
+        <div class="league-stats">
+          <div><div class="league-stat-num">30.1</div><div class="league-stat-label">Jordan's career PPG</div></div>
+          <div><div class="league-stat-num">100</div><div class="league-stat-label">Points in one game (Wilt)</div></div>
+          <div><div class="league-stat-num">$10B</div><div class="league-stat-label">Annual revenue</div></div>
+        </div>
+        <div class="league-cta">Explore NBA →</div>
+      </a>
+
+      <a href="nfl.html" class="league-hero-card">
+        <div class="league-abbr">NFL</div>
+        <div class="league-full">National Football League</div>
+        <div class="league-founded mono">Founded 1920 · 32 Teams</div>
+        <p class="league-desc">America's most watched sport. Super Bowls, Hail Marys, and the cultural force that defines American autumn Sundays — the NFL is the most profitable sports league in the world.</p>
+        <div class="league-stats">
+          <div><div class="league-stat-num">7</div><div class="league-stat-label">Brady's Super Bowls</div></div>
+          <div><div class="league-stat-num">100M+</div><div class="league-stat-label">Super Bowl viewers</div></div>
+          <div><div class="league-stat-num">$18B</div><div class="league-stat-label">Annual revenue</div></div>
+        </div>
+        <div class="league-cta">Explore NFL →</div>
+      </a>
+
+      <a href="mlb.html" class="league-hero-card">
+        <div class="league-abbr">MLB</div>
+        <div class="league-full">Major League Baseball</div>
+        <div class="league-founded mono">Founded 1876 · 30 Teams</div>
+        <p class="league-desc">America's pastime and its oldest major professional league. From Jackie Robinson's debut to the Cubs ending their 108-year drought — baseball is inseparable from the American story.</p>
+        <div class="league-stats">
+          <div><div class="league-stat-num">1876</div><div class="league-stat-label">Year founded</div></div>
+          <div><div class="league-stat-num">755</div><div class="league-stat-label">Hank Aaron's home runs</div></div>
+          <div><div class="league-stat-num">$11B</div><div class="league-stat-label">Annual revenue</div></div>
+        </div>
+        <div class="league-cta">Explore MLB →</div>
+      </a>
+
+      <a href="nhl.html" class="league-hero-card">
+        <div class="league-abbr">NHL</div>
+        <div class="league-full">National Hockey League</div>
+        <div class="league-founded mono">Founded 1917 · 32 Teams</div>
+        <p class="league-desc">The fastest game on ice. The NHL has produced some of the toughest athletes in professional sport — and the Miracle on Ice remains one of the greatest moments in American sports history.</p>
+        <div class="league-stats">
+          <div><div class="league-stat-num">61</div><div class="league-stat-label">Gretzky's NHL records</div></div>
+          <div><div class="league-stat-num">1893</div><div class="league-stat-label">Stanley Cup first awarded</div></div>
+          <div><div class="league-stat-num">$6B</div><div class="league-stat-label">Annual revenue</div></div>
+        </div>
+        <div class="league-cta">Explore NHL →</div>
+      </a>
+
+    </div>
+
+  </div>
+
+  <section class="blockquote-section">
+    <blockquote>"It's not whether you get knocked down, it's whether you get up."</blockquote>
+    <cite>— Vince Lombardi</cite>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">ASLM</div>
+        <div class="footer-full mono">American Sports Legacy Museum</div>
+        <p>A digital exhibition exploring the history, culture, and memorabilia of American sport.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title mono">Leagues</div>
+          <a href="nba.html">NBA</a>
+          <a href="nfl.html">NFL</a>
+          <a href="mlb.html">MLB</a>
+          <a href="nhl.html">NHL</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title mono">Explore</div>
+          <a href="legends.html">Legends</a>
+          <a href="artifacts.html">Artifacts</a>
+          <a href="timeline.html">Timeline</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title mono">Sources</div>
+          <a href="https://www.archives.gov" target="_blank">National Archives</a>
+          <a href="https://www.si.edu" target="_blank">Smithsonian</a>
+          <a href="https://www.loc.gov" target="_blank">Library of Congress</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="mono">© 2025 American Sports Legacy Museum — NJIT IT310</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
