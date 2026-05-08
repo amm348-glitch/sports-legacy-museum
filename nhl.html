@@ -10,8 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet" />
   <style>
     .player-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--gray-2); margin-top: 48px; }
-    .player-card { background: var(--gray-1); padding: 0; overflow: hidden; display: block; }
-    .player-img { width: 100%; aspect-ratio: 3/4; overflow: hidden; background: var(--gray-2); display:flex; align-items:center; justify-content:center; }
+    .player-card { background: var(--gray-1); overflow: hidden; display: block; transition: background 0.2s; }
+    .player-card:hover { background: var(--gray-2); }
+    .player-img { width: 100%; aspect-ratio: 3/4; overflow: hidden; background: var(--black); }
+    .player-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
     .player-info { padding: 24px; }
     .player-name { font-family: var(--font-display); font-size: 1.8rem; text-transform: uppercase; line-height: 1; }
     .player-pos { font-family: var(--font-mono); font-size: 0.65rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; margin: 6px 0 10px; }
@@ -20,7 +22,6 @@
   </style>
 </head>
 <body>
-
   <nav class="nav">
     <div class="nav-logo">ASLM</div>
     <div class="nav-links">
@@ -33,15 +34,13 @@
     </div>
     <div class="nav-tag">EST. 2025</div>
   </nav>
-
   <header class="page-header">
     <div class="page-header-inner">
       <div class="section-label mono">League Wing — 05</div>
       <h1>NHL<br/>Hockey</h1>
-      <p>The fastest game on ice. The National Hockey League has operated since 1917, producing some of the toughest, most relentless athletes in professional sport and cultivating one of the most passionate fanbases in all of sports.</p>
+      <p>The fastest game on ice. American-born players who built hockey culture in the United States — from the Dallas Stars to the New York Rangers, these are the homegrown legends of the NHL.</p>
     </div>
   </header>
-
   <div class="proof-banner">
     <div class="proof-inner">
       <span class="mono">By the numbers:</span>
@@ -54,105 +53,61 @@
       <span class="proof-source">$6B Annual Revenue</span>
     </div>
   </div>
-
   <div class="page-content">
-
-    <div class="section-label mono">The Greats</div>
-    <h2>Hockey Legends</h2>
-    <p style="color:var(--gray-4); max-width:560px; margin-top:12px;">The skaters and goalies who defined the ice — from Gretzky's untouchable records to Orr's revolutionary defense.</p>
-
+    <div class="section-label mono">American-Born Legends</div>
+    <h2>Hockey Greats</h2>
+    <p style="color:var(--gray-4); max-width:560px; margin-top:12px;">The American-born players who made the NHL their home and helped grow hockey culture across the United States.</p>
     <div class="player-grid">
-
       <div class="player-card">
-        <div class="player-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Stanley_Cup%2C_2015.jpg/960px-Stanley_Cup%2C_2015.jpg" alt="Stanley Cup" style="width:100%;height:100%;object-fit:cover;" />
-        </div>
+        <div class="player-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Modano_stars_2007_%28467934429%29_%28cropped%29.jpg/500px-Modano_stars_2007_%28467934429%29_%28cropped%29.jpg" alt="Mike Modano" /></div>
         <div class="player-info">
-          <div class="player-pos">Center · Edmonton Oilers</div>
-          <div class="player-name">Wayne Gretzky</div>
-          <p class="player-desc">The Great One. 4× Stanley Cup Champion. Holds 61 NHL records — his assists total alone exceeds the total points of every other player in history. Simply the greatest hockey player who ever lived.</p>
+          <div class="player-pos">Center · Dallas Stars</div>
+          <div class="player-name">Mike Modano</div>
+          <p class="player-desc">1× Stanley Cup Champion. The all-time leading scorer among American-born NHL players with 1,374 career points. Modano's combination of speed, skill, and longevity made him the face of American hockey for two decades.</p>
         </div>
       </div>
-
       <div class="player-card">
-        <div class="player-img" style="background:var(--gray-2);">
-          <div style="font-family:var(--font-display); font-size:8rem; color:var(--gray-3);">4</div>
-        </div>
+        <div class="player-img"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Pat_LaFontaine%2C_1997.jpg" alt="Pat LaFontaine" /></div>
         <div class="player-info">
-          <div class="player-pos">Defense · Boston Bruins</div>
-          <div class="player-name">Bobby Orr</div>
-          <p class="player-desc">Revolutionized the defenseman position by becoming an offensive force. 2× Stanley Cup Champion, 3× Hart Trophy (MVP). His 1970 overtime goal — captured in the most famous photo in hockey history — won the Bruins their first Cup in 29 years.</p>
+          <div class="player-pos">Center · Buffalo Sabres / Rangers</div>
+          <div class="player-name">Pat LaFontaine</div>
+          <p class="player-desc">8× All-Star, 1× Masterton Trophy. One of the most gifted American-born players in NHL history. LaFontaine's 1992-93 season — 53 goals, 95 assists — remains one of the greatest individual seasons by an American in NHL history.</p>
         </div>
       </div>
-
       <div class="player-card">
-        <div class="player-img" style="background:var(--gray-2);">
-          <div style="font-family:var(--font-display); font-size:8rem; color:var(--gray-3);">9</div>
-        </div>
+        <div class="player-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/ChrisChelios.png/500px-ChrisChelios.png" alt="Chris Chelios" /></div>
         <div class="player-info">
-          <div class="player-pos">Right Wing · Montreal Canadiens</div>
-          <div class="player-name">Maurice "Rocket" Richard</div>
-          <p class="player-desc">8× Stanley Cup Champion. The first player to score 50 goals in 50 games (1944-45). Richard's intensity and clutch performances made him a symbol of French-Canadian pride and the most celebrated athlete in Montreal history.</p>
+          <div class="player-pos">Defense · Multiple Teams</div>
+          <div class="player-name">Chris Chelios</div>
+          <p class="player-desc">3× Stanley Cup Champion, 3× Norris Trophy (best defenseman). Chelios played 26 NHL seasons — the longest career of any American-born player in history. His physicality and compete level set the standard for American defensemen.</p>
         </div>
       </div>
-
       <div class="player-card">
-        <div class="player-img" style="background:var(--gray-2);">
-          <div style="font-family:var(--font-display); font-size:8rem; color:var(--gray-3);">19</div>
-        </div>
+        <div class="player-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Brian_Leetch_New_York_Rangers_1997_Vancouver.jpg/500px-Brian_Leetch_New_York_Rangers_1997_Vancouver.jpg" alt="Brian Leetch" /></div>
         <div class="player-info">
-          <div class="player-pos">Center · Detroit Red Wings</div>
-          <div class="player-name">Steve Yzerman</div>
-          <p class="player-desc">3× Stanley Cup Champion. "Stevie Y" captained the Detroit Red Wings for 20 seasons — the longest captaincy in NHL history. His transformation from pure scorer to defensive stalwart after a knee injury is one of hockey's great stories of reinvention.</p>
+          <div class="player-pos">Defense · New York Rangers</div>
+          <div class="player-name">Brian Leetch</div>
+          <p class="player-desc">1× Stanley Cup Champion, 1994 Conn Smythe Trophy (playoff MVP), 2× Norris Trophy. Leetch's offensive brilliance from the blue line helped end the Rangers' 54-year championship drought in 1994 — one of the most celebrated moments in New York sports history.</p>
         </div>
       </div>
-
       <div class="player-card">
-        <div class="player-img" style="background:var(--gray-2);">
-          <div style="font-family:var(--font-display); font-size:8rem; color:var(--gray-3);">30</div>
-        </div>
+        <div class="player-img"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Mike_Richter.jpg" alt="Mike Richter" /></div>
         <div class="player-info">
-          <div class="player-pos">Goalie · New York Rangers / Vancouver Canucks</div>
-          <div class="player-name">Henrik Lundqvist</div>
-          <p class="player-desc">"The King." 1× Vezina Trophy winner, 2012 Olympic Gold Medal with Sweden. Lundqvist's acrobatic saves and calm under pressure made him the face of the New York Rangers for 15 seasons — and one of the greatest goalies of the modern era.</p>
+          <div class="player-pos">Goalie · New York Rangers</div>
+          <div class="player-name">Mike Richter</div>
+          <p class="player-desc">1× Stanley Cup Champion (1994), 1996 World Cup MVP. Richter was the backbone of the Rangers' 1994 championship run — his Game 6 save against Vancouver is one of the most iconic moments in Rangers history. Named the greatest American-born goalie of all time by Hockey News.</p>
         </div>
       </div>
-
       <div class="player-card">
-        <div class="player-img" style="background:var(--gray-2);">
-          <div style="font-family:var(--font-display); font-size:8rem; color:var(--gray-3);">87</div>
-        </div>
+        <div class="player-img"><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Jeremy_Roenick_2012.jpg" alt="Jeremy Roenick" /></div>
         <div class="player-info">
-          <div class="player-pos">Center · Pittsburgh Penguins</div>
-          <div class="player-name">Sidney Crosby</div>
-          <p class="player-desc">3× Stanley Cup Champion, 2× Conn Smythe Trophy, 2× Hart Trophy. "Sid the Kid" is the defining superstar of his generation — a complete player who combines elite scoring with defensive responsibility and leadership.</p>
+          <div class="player-pos">Center · Chicago Blackhawks / Multiple Teams</div>
+          <div class="player-name">Jeremy Roenick</div>
+          <p class="player-desc">8× All-Star, 513 career goals. One of the most charismatic and skilled American players in NHL history. Roenick's passion for the game and outspoken personality helped grow hockey's profile in the United States throughout the 1990s and 2000s.</p>
         </div>
       </div>
-
     </div>
-
-    <!-- STANLEY CUP SECTION -->
     <section style="margin-top: 80px; padding-top: 60px; border-top: 1px solid var(--gray-2);">
-      <div class="section-label mono">The Trophy</div>
-      <h2>The Stanley Cup</h2>
-      <div class="exhibit-grid" style="margin-top:40px;">
-        <div class="exhibit-card">
-          <div class="exhibit-year">1893 — First Awarded</div>
-          <h3>Lord Stanley's Gift</h3>
-          <p>The Stanley Cup was donated by Lord Stanley of Preston, the Governor General of Canada, in 1892. First awarded in 1893 to the Montreal Hockey Club — it is the oldest professional sports trophy in North America, predating the World Series by a decade.</p>
-          <span class="exhibit-tag mono">Trophy History</span>
-        </div>
-        <div class="exhibit-card">
-          <div class="exhibit-year">The Tradition</div>
-          <h3>A Trophy That Travels</h3>
-          <p>Unlike every other major trophy in professional sports, the Stanley Cup travels. Each player on the winning team gets it for one day during the summer — taking it home, to their hometown, to hospitals, beaches, and restaurants. It has been taken cliff diving, used as a cereal bowl, and lost by the New Jersey Devils.</p>
-          <span class="exhibit-tag mono">Cultural Legacy</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- MIRACLE ON ICE -->
-    <section style="margin-top: 60px; padding-top: 60px; border-top: 1px solid var(--gray-2);">
       <div class="section-label mono">February 22, 1980</div>
       <h2>Miracle on Ice</h2>
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:60px; align-items:center; margin-top:40px;">
@@ -169,14 +124,29 @@
         </div>
       </div>
     </section>
-
+    <section style="margin-top: 60px; padding-top: 60px; border-top: 1px solid var(--gray-2);">
+      <div class="section-label mono">The Trophy</div>
+      <h2>The Stanley Cup</h2>
+      <div class="exhibit-grid" style="margin-top:40px;">
+        <div class="exhibit-card">
+          <div class="exhibit-year">1893 — First Awarded</div>
+          <h3>Lord Stanley's Gift</h3>
+          <p>The Stanley Cup was donated by Lord Stanley of Preston in 1892 and first awarded in 1893. It is the oldest professional sports trophy in North America — predating the World Series by a decade.</p>
+          <span class="exhibit-tag mono">Trophy History</span>
+        </div>
+        <div class="exhibit-card">
+          <div class="exhibit-year">The Tradition</div>
+          <h3>A Trophy That Travels</h3>
+          <p>Unlike every other major trophy in professional sports, the Stanley Cup travels. Each player on the winning team gets it for one day during the summer — it has been taken cliff diving, used as a cereal bowl, and brought to the top of mountains.</p>
+          <span class="exhibit-tag mono">Cultural Legacy</span>
+        </div>
+      </div>
+    </section>
   </div>
-
   <section class="blockquote-section">
-    <blockquote>"You miss 100% of the shots you don't take."</blockquote>
-    <cite>— Wayne Gretzky</cite>
+    <blockquote>"Do you believe in miracles? YES!"</blockquote>
+    <cite>— Al Michaels, February 22, 1980</cite>
   </section>
-
   <footer class="footer">
     <div class="footer-top">
       <div class="footer-brand">
@@ -187,24 +157,16 @@
       <div class="footer-links">
         <div class="footer-col">
           <div class="footer-col-title mono">Leagues</div>
-          <a href="nba.html">NBA</a>
-          <a href="nfl.html">NFL</a>
-          <a href="mlb.html">MLB</a>
-          <a href="nhl.html">NHL</a>
+          <a href="nba.html">NBA</a><a href="nfl.html">NFL</a><a href="mlb.html">MLB</a><a href="nhl.html">NHL</a>
         </div>
         <div class="footer-col">
           <div class="footer-col-title mono">Explore</div>
-          <a href="legends.html">Legends</a>
-          <a href="artifacts.html">Artifacts</a>
-          <a href="timeline.html">Timeline</a>
+          <a href="legends.html">Legends</a><a href="artifacts.html">Artifacts</a><a href="timeline.html">Timeline</a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span class="mono">© 2025 American Sports Legacy Museum — NJIT IT310</span>
-    </div>
+    <div class="footer-bottom"><span class="mono">© 2025 American Sports Legacy Museum — NJIT IT310</span></div>
   </footer>
-
   <script src="../js/main.js"></script>
 </body>
 </html>
